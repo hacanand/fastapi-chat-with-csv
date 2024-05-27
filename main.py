@@ -10,6 +10,9 @@ load_dotenv()
 
 app = FastAPI()
  
+@app.get("/no/test")
+async def test():
+    return {"message": "Hello World"}
 
 @app.get("/{query}")
 async def chat(query: str):
